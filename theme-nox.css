@@ -22,3 +22,18 @@
 #skipIntro .emby-button:hover {
     color: #000 !important;
 }
+
+/* Hide default logo image */
+.headerLogo img {
+    display: none !important;
+}
+
+/* Replace with custom background image */
+.headerLogo {
+    background-image: url('https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px; /* adjust as needed */
+    width: 120px; /* adjust as needed */
+}
