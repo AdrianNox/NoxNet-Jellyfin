@@ -1,10 +1,10 @@
 /* Variables */
 :root {
-    --primary-r: 0;
-    --primary-g: 164;
-    --primary-b: 220;
+    --primary-r: 255;
+    --primary-g: 140;
+    --primary-b: 0;
     --primary-accent-color: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 1.0);
-    --secondary-accent-color: #00a4dc20;
+    --secondary-accent-color: rgba(255, 140, 0, 0.2);
     --primary-background-color: #101010;
     --secondary-background-color: #181818;
     --primary-background-transparent: rgba(35,35,35,0.5);
@@ -13,11 +13,21 @@
     --blur: 10px;
 
     /* Alternate accents*/
-    --primary-alt1: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 1);
-    --primary-alt2: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.85);
-    --primary-alt3: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.7);
-    --primary-alt4: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.55);
-    --primary-alt5: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.4);
+    --primary-alt1: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.85);
+    --primary-alt2: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.7);
+    --primary-alt3: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.55);
+    --primary-alt4: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.4);
+    --primary-alt5: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.25);
+}
+
+.layout-desktop .button-submit,
+.layout-desktop .checkboxIcon,
+.layout-desktop .countIndicator {
+    color: var(--secondary-background-color) !important;
+}
+
+#skipIntro .emby-button:hover {
+    color: #000 !important;
 }
 
 /* Setting accent color variable */
