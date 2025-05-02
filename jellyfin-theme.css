@@ -72,8 +72,11 @@ progress::-webkit-progress-value {
 
 /* Increase size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
-    margin-left: 25px !important;
-    height: 40px !important;
+    margin-left: 0px !important;
+    height: 50px !important;
+    background-image: url('https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Fix for empty header with padding */
@@ -292,17 +295,7 @@ html,
     background-color: var(--primary-background-color) !important;
 }
 
-/*Replace the Large Backdrop / Hero Image*/
-.backgroundContainer::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: url('https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png') no-repeat center center;
-    background-size: cover;
-    z-index: -1;
-    opacity: 1; /* adjust if needed */
-}
+
 
 /* Transparent header bar */
 .skinHeader {
@@ -1064,8 +1057,6 @@ html,
     top: -15px !important;
 }
 
-
-
 /* Fix for scaling issues */
 @media (width: 1600px) {
     .layout-desktop .headerRight {
@@ -1094,8 +1085,6 @@ html,
     }
 }
 
-
-
 /* Fixes for TV Layout */
 .layout-tv .sectionTabs {
     width: auto !important;
@@ -1103,8 +1092,6 @@ html,
 .layout-tv .headerLeft {
     padding: 5px !important;
 }
-
-
 
 /* Login page */
 .layout-desktop #loginPage {
@@ -1189,8 +1176,6 @@ html,
     }
 }
 
-
-
 /* Dialog box */
 .dialog {
     background-color: var(--secondary-background-color) !important;
@@ -1198,8 +1183,6 @@ html,
 .actionSheetTitle {
     margin: 10px 20px !important;
 }
-
-
 
 /* Dynamic backdrop support */
 
