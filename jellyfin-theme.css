@@ -72,11 +72,8 @@ progress::-webkit-progress-value {
 
 /* Increase size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
-    margin-left: 0px !important;
-    height: 50px !important;
-    background-image: url('https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png');
-    background-repeat: no-repeat;
-    background-position: center;
+    margin-left: 25px !important;
+    height: 40px !important;
 }
 
 /* Fix for empty header with padding */
