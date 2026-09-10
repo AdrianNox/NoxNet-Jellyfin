@@ -1,14 +1,41 @@
-:root {
-    --primary-r: 255;
-    --primary-g: 140;
-    --primary-b: 0;
-    --primary-accent-color: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 1.0);
-    --secondary-accent-color: rgba(255, 140, 0, 0.2);
+/* Change Jellyfin Logo in v12 Top Navigation Bar */
+.viewMenuBar .viewMenuBar-logo {
+    background-image: url(https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png) !important;
 }
-.layout-desktop .pageTitleWithLogo {
-    margin-left: 0px !important;
-    height: 50px !important;
-    background-image: url('https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png');
-    background-repeat: no-repeat;
-    background-position: center;
+/* Fallback for Legacy/TV Layouts and Dashboard */
+.pageTitleWithDefaultLogo, .loginLogo {
+    background-image: url(https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png) !important;
+}
+/* Update the Side Admin/Drawer Logo if applicable */
+.adminDrawerLogo img {
+    content: url(https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png) !important;
+}
+/* Progress Bar Fill Color */
+.mdl-slider::-webkit-slider-thumb {
+    background: rgba(255, 140, 0, 0.8) !important;
+}
+.mdl-slider::-moz-range-thumb {
+    background: rgba(255, 140, 0, 0.8) !important;
+}
+.mdl-slider::-ms-thumb {
+    background: rgba(255, 140, 0, 0.8) !important;
+}
+/* Track background and completion fill */
+.sliderContainer .sliderBackground, 
+.sliderContainer .sliderSelectBar {
+    background-color: rgba(255, 140, 0, 0.8) !important;
+}
+/* Optional: Unwatched/Watched indicator bars on posters (Library view) */
+.itemProgressBarForeground {
+    background-color: rgba(255, 140, 0, 0.8) !important;
+}
+/* Change Unwatched / Played Indicator Badge Background */
+.playedIndicator, 
+.countIndicator {
+    background-color: rgba(255, 140, 0, 0.8) !important; /* Bumped opacity to 0.8 so the icon stands out */
+}
+/* Optional: Change the color of the checkmark/number inside the badge */
+.playedIndicator .material-icons,
+.countIndicator {
+    color: #ffffff !important; /* Keeps the inner icon sharp white against the orange */
 }
