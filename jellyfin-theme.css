@@ -1,14 +1,35 @@
-/* Change Jellyfin Logo in v12 Top Navigation Bar */
+:root {
+    /* Sets your custom banner globally */
+    --logo: url("https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png") !important;
+}
+/* Force the v12 Top Navigation bar logo */
 .viewMenuBar .viewMenuBar-logo {
-    background-image: url(https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png) !important;
+    background-image: var(--logo) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    width: 180px !important; /* Made wider to prevent the "Network" text from clipping */
+    height: 44px !important;
 }
-/* Fallback for Legacy/TV Layouts and Dashboard */
-.pageTitleWithDefaultLogo, .loginLogo {
-    background-image: url(https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png) !important;
+/* Force the Login/Splash Screen Logo */
+.loginLogo, .pageTitleWithDefaultLogo, .imgLogoIcon {
+    content: var(--logo) !important;
+    background-image: var(--logo) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    height: 100px !important; 
+    width: 400px !important; /* Matches the wide aspect ratio of your banner */
 }
-/* Update the Side Admin/Drawer Logo if applicable */
+/* Darken the login page background so your white logo is visible */
+#loginPage {
+    background-color: #101010 !important;
+}
+/* Force the Admin Drawer/Sidebar Logo */
 .adminDrawerLogo img {
-    content: url(https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png) !important;
+    content: var(--logo) !important;
+    max-height: 50px !important;
+    width: auto !important;
 }
 /* Progress Bar Fill Color */
 .mdl-slider::-webkit-slider-thumb {
