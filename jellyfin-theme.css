@@ -1,3 +1,62 @@
+:root {
+    --primary-r: 255;
+    --primary-g: 140;
+    --primary-b: 0;
+    --primary-accent-color: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 1.0);
+    --secondary-accent-color: rgba(255, 140, 0, 0.2);
+}
+.layout-desktop .pageTitleWithLogo {
+    margin-left: 0px !important;
+    height: 50px !important;
+    background-image: url('https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+* == Default Logo Styling == */
+/* Styles for the Jellyfin logo when a custom one isn't set by the user. */
+.pageTitleWithDefaultLogo {
+    background-image: var(--logo) !important; /* Uses the --logo variable, ensure it's defined in your color scheme files */
+    background-size: 100% !important; /* Make logo responsive within its container */
+}
+/* Desktop logo dimensions and positioning. */
+.layout-tv .pageTitleWithLogo, .layout-desktop .pageTitleWithLogo {
+    margin-left: 25px !important;
+    height: 60px !important;
+    width: 140px !important;
+}
+/* Mobile logo dimensions and positioning. */
+.layout-mobile .pageTitleWithLogo {
+    height: 30px !important;
+    width: 100px !important;
+    margin: 0 1em 0 .5em !important;
+    padding: 10px !important;
+}
+/* General page title margin (when logo is not present or text only). */
+[dir="ltr"] .pageTitle {
+    margin: 0 1em 0 .5em !important;
+}
+/* Fix for empty page titles that might otherwise take up space due to margin. */
+[dir="ltr"] .pageTitle:not(.pageTitleWithLogo):empty {
+    margin: 0 !important;
+}
+/* == Detail Page Logo Positioning and Styling == */
+/* Styles for the series/movie logo image displayed on the details page. */
+.layout-desktop .detailLogo,
+.layout-tv .detailLogo {
+    right: 0 !important;     /* Align to right edge (or reset if previously centered) */
+    left: 4% !important;     /* Position from left */
+    top: 10% !important;     /* Position from top */
+    position: absolute !important; /* Absolute positioning for precise placement */
+    width: auto !important;  /* Allow natural width based on height or max-width */
+    max-width: 30%;          /* Maximum width relative to parent */
+    max-height: 30%;         /* Maximum height relative to parent - adjust for logo size */
+    height: 800px !important;/* Fixed height, likely overridden by max-height. Review if this is intended or if max-height is sufficient. */
+    z-index: 3;              /* Ensure logo is above backdrop but potentially below some OSD elements */
+    object-fit: contain !important; /* Ensure logo scales properly without overflow */
+    animation: slideInLogo 0.8s ease-out; /* Apply slide-in animation */
+}
+
+* == NoxNet Logo Styling == */
 /* Replace Logo with streamberry logo, this should be the last line in CSS */
 :root {
     --logo: url("https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin/nox-banner.png");
