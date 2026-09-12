@@ -8,7 +8,7 @@
 .layout-desktop .pageTitleWithLogo {
     margin-left: 0px !important;
     height: 50px !important;
-    background-image: url('https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin@latest/nox-banner.png');
+    background-image: url('https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin/nox_logo.png');
     background-repeat: no-repeat;
     background-position: center;
 
@@ -59,7 +59,7 @@
 * == NoxNet Logo Styling == */
 /* Replace Logo with streamberry logo, this should be the last line in CSS */
 :root {
-    --logo: url("https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin/nox-banner.png");
+    --logo: url("https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin/nox_logo.png");
 }
 
 .pageTitleWithDefaultLogo {
