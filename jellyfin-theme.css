@@ -1,29 +1,20 @@
-/* Progress Bar Fill Color */
-.mdl-slider::-webkit-slider-thumb {
-    background: rgba(255, 140, 0, 0.8) !important;
+/* Replace Logo with streamberry logo, this should be the last line in CSS */
+:root {
+    --logo: url("https://cdn.jsdelivr.net/gh/AdrianNox/NoxNet-Jellyfin/nox-banner.png");
 }
-.mdl-slider::-moz-range-thumb {
-    background: rgba(255, 140, 0, 0.8) !important;
+
+.pageTitleWithDefaultLogo {
+    background-size: 100% !important;
 }
-.mdl-slider::-ms-thumb {
-    background: rgba(255, 140, 0, 0.8) !important;
+
+.layout-mobile .pageTitleWithDefaultLogo {
+    width: 130px !important;
 }
-/* Track background and completion fill */
-.sliderContainer .sliderBackground, 
-.sliderContainer .sliderSelectBar {
-    background-color: rgba(255, 140, 0, 0.8) !important;
+
+#loginPage .visualLoginForm:not(.hide) h1::before {
+  background-size: 50% !important;
 }
-/* Optional: Unwatched/Watched indicator bars on posters (Library view) */
-.itemProgressBarForeground {
-    background-color: rgba(255, 140, 0, 0.8) !important;
-}
-/* Change Unwatched / Played Indicator Badge Background */
-.playedIndicator, 
-.countIndicator {
-    background-color: rgba(255, 140, 0, 0.8) !important; /* Bumped opacity to 0.8 so the icon stands out */
-}
-/* Optional: Change the color of the checkmark/number inside the badge */
-.playedIndicator .material-icons,
-.countIndicator {
-    color: #ffffff !important; /* Keeps the inner icon sharp white against the orange */
+
+#loginPage .manualLoginForm:not(.hide) h1.sectionTitle::before {
+  background-size: 100% !important;
 }
